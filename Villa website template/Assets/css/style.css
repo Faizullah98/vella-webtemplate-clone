@@ -8,13 +8,17 @@
     --first-color: #f35525;
     --second-color: #1e1e1e;
     --third-color: #7a7a7a;
+    --para-color: #aaaaaa;
     --white-color: #ffffff;
     --black-color: #000000;
+}
+body{
+    min-height: 100vh;
 }
 
 /* Global styles  */
 .container{
-    max-width: 1170px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 .flex{
@@ -22,7 +26,12 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.padding-100px{
+    padding: 100px 0px;
+}
+img{
+    width: 100%;
+}
 /* Header styling  */
 .top-header{
     background-color: var(--white-color);
@@ -43,6 +52,7 @@
 .right-socialicons ul li{
     display: inline-block;
     margin-right: 1rem;
+    font-size: .875rem;
 }
 .right-socialicons ul li i{
     background-color: #cdcdcd;
@@ -58,13 +68,14 @@
 }
 /* Navbar styling  */
 header{
-    height: 80px;
+    height: 90px;
     vertical-align: middle;
-    line-height: 80px;
+    line-height: 90px;
 }
 .logo-brand{
-    font-size: 16px;
+    font-size: 20px;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .logo-brand a{
     text-decoration: none;
@@ -98,4 +109,162 @@ header{
     padding: 10px;
     margin-right: 10px;
     border-radius: 50px;
+}
+.mobilemenu{
+    display: none;
+}
+
+/* Banner area styling  */
+
+.banner{
+    padding: 220px 0px;
+    background: url("../images/banner-03.jpg") center/cover no-repeat;
+}
+
+.banner p{
+    background-color: var(--white-color);
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.banner .citycolor{
+    color: var(--first-color);
+}
+.banner h1{
+    color: var(--white-color);
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    line-height: 5rem;
+}
+
+
+/* Featured area  */
+.feauter-icon img{
+    width: 100%;
+}
+.feauter-icon{
+    background-color: var(--first-color);
+    padding: 24px;
+    border-radius: 50%;
+
+}
+.feature-grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+}
+
+.image-content{
+    display: flex;
+    gap: 2rem;
+}
+.imageicon{
+    position: relative;
+    width: 40%;
+}
+.imageicon a{
+    background-color: var(--first-color);
+    padding: 28px 32px;
+    position: absolute;
+    bottom: -55px;
+    left: -27px;
+    border-radius: 50%;
+}
+.imageicon a img{
+    padding: 0px;
+    max-width: 60px;
+}
+.feature-content{
+    width: 60%;
+}
+.feature-content .feature-title{
+    color: var(--first-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.feature-content .feature-title:before {
+    content: "";
+    width: 2px;
+    height: 12px;
+    background-color: var(--first-color);
+    display: inline-block;
+    margin-right: 4px;
+}
+.feature-content h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.accordian-container{
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 15px;
+}
+.accordian-container .accordian-title{
+    padding: 12px;
+    border-bottom: 1px solid #fafafa;
+    cursor: pointer;
+}
+.accordian-container .accordian-title .active{
+    color: var(--first-color);
+}
+.accordian-container .accordian-desc{
+    display: none;
+    padding: 12px;
+}
+
+.about-feature{
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 13px 4px #f4f4f4;
+    border-radius: 15px;
+}
+.about-feature .icon-box:last-child{
+    border-bottom: none;
+}
+.icon-box {
+    display: flex;
+    gap: 2rem;
+    padding: 30px;
+    border-bottom: 2px solid #f4f4f4;
+    align-items: center;
+    justify-content: center;
+}
+.icon-box img{
+    max-width: 60px;
+}
+.icon-content h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+.icon-content p{
+    font-size: 15px;
+    color: var(--para-color);
+    font-weight: 400;
+}
+@media only screen and (max-width: 544px) {
+    .top-header{
+        display: none;
+    }
+    nav{
+        padding: 0px 15px;
+    }
+    .mobilemenu{
+        display: block;
+        font-size: 1.5rem;
+        color: #000;
+    }
+    .navbar-links{
+        display: none;
+    }
+    /* banner  */
+    .banner {
+        padding: 50px 15px;
+    }
+    .banner h1 {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
 }
